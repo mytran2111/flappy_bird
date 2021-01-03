@@ -1,9 +1,9 @@
 let y = 0; // y coordinate of the ball 
 let x; // x- coordinate of the ball 
-let vy = 0; // velocity
+let vy; // velocity
 let radius; 
 let rectWidth; 
-let vx = 1; 
+let vx; 
 let g = 0.1; //gravity
 let gap; 
 let distancePipe = 175; 
@@ -16,7 +16,10 @@ function setup(){
   x = width/3; 
   radius = 15; 
   rectWidth = 30; 
-  gameOver = false; 
+  gameOver = false;
+  //   Set up velocity
+  vy = 0; 
+  vx = 1; 
   // initialize pipeArray with first pipe
   pipeArray.push([width-10, 2*height/3]);
   gap = 1/3 * height;
